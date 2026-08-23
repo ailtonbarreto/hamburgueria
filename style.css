@@ -74,6 +74,10 @@ html {
     font-weight: 700;
 }
 
+.logo_mobile {
+    display: none;
+}
+
 header {
     position: fixed;
     inset: 0 0 auto 0;
@@ -128,7 +132,7 @@ header nav a:hover {
 
 .hero img {
     border-radius: var(--radius);
-    box-shadow: 0 20px 60px rgba(255,107,53,0.3);
+    box-shadow: 0 20px 60px rgba(255, 107, 53, 0.3);
 }
 
 .hero-buttons {
@@ -212,7 +216,7 @@ header nav a:hover {
     font-size: 20px;
 }
 
-.menu-grid  p {
+.menu-grid p {
     padding: 0 20px;
     font-size: 14px;
     color: var(--gray);
@@ -265,7 +269,7 @@ header nav a:hover {
 .cta {
     padding: 80px 5%;
     text-align: center;
-    background: linear-gradient(135deg,var(--primary), #e55a2b);
+    background: linear-gradient(135deg, var(--primary), #e55a2b);
 }
 
 .cta h2 {
@@ -275,14 +279,14 @@ header nav a:hover {
 }
 
 .cta p {
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 18px;
     margin-bottom: 30px;
 }
 
 footer {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     padding: 60px 5% 20px;
     background: var(--dark);
@@ -292,4 +296,83 @@ footer {
 footer .copy {
     grid-column: 1/-1;
     text-align: center;
+}
+
+/* ---------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        min-height: 50px;
+    }
+
+    .desktop_menu {
+        display: none;
+    }
+
+    .logo_mobile {
+        display: flex;
+    }
+
+    #open_mobile {
+        display: block !important;
+        margin: 1vw;
+        font-size: 8vw;
+        color: #e55a2b;
+        z-index: 100;
+    }
+
+    #close_mobile {
+        z-index: 101;
+        color: #e55a2b;
+    }
+
+    .navbar-mobile {
+        display: flex;
+        position: fixed;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        align-items: center;
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 10vw;
+        background-color: #fdfdfd;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        height: 100vh;
+        z-index: 200;
+
+        span {
+            position: fixed;
+            top: 3vw;
+            right: 3vw;
+            font-size: 10vw;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: #e55a2b;
+            font-weight: bold;
+            font-size: 5vw;
+        }
+
+    }
+
+    .hero img{
+        display: none;
+    }
+
+    .sobre, .hero, footer{
+        grid-template-columns: 1fr;
+    }
 }

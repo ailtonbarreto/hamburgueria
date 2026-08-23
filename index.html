@@ -4,21 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
-    <title>Hamburgueria do Dev</title>
+    <link rel="shortcut icon" href="burger.ico" type="image/x-icon">
+    <script src="menu_mobile.js"></script>
+    <title>Dev Burguer</title>
 </head>
 
 <body>
+
     <header>
-        <a href="#" class="logo">🍔 DevBurger</a>
-        <nav>
+
+        <a href="#" class="logo desktop_menu">🍔 DevBurger</a>
+
+        <nav class="desktop_menu">
             <a href="#">Início</a>
             <a href="#cardapio">Cardápio</a>
             <a href="#sobre">Sobre</a>
             <a href="#contato">Contato</a>
         </nav>
-        <a href="#cardapio" class="btn">Peça Agora</a>
+
+        <a href="#cardapio" class="btn desktop_menu">Peça Agora</a>
+
+        <!-- ------------------------------------------------------------------------>
+        
+        <a href="#" class="logo logo_mobile">🍔 DevBurger</a>
+
+        <span class="material-symbols-outlined" id="open_mobile" style="display: none;">menu</span>
+
+        <nav class="navbar-mobile" style="display: none;">
+
+            <div class="mobile-menu" style="display: none;">
+
+                <a href="#" class="mobile_link">Início</a>
+                <a href="#cardapio" class="mobile_link">Cardápio</a>
+                <a href="#sobre" class="mobile_link">Sobre</a>
+                <a href="#contato" class="mobile_link">Contato</a>
+
+                <span class="material-symbols-outlined" id="close_mobile">cancel</span>
+
+            </div>
+
+        </nav>
+
     </header>
+
+    <!-- --------------------------------------------------------------------------->
 
     <section id="home" class="hero-wrapper">
         <article class="hero">
