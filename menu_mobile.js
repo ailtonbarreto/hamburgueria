@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
         // menu_mobile.style.display = "none";
         nav_bar.style.display = "none";
         open_mobile.style.visibility = "visible";
-        body.style.overflow = "auto";
+        body.style.overflow = "scroll";
 
 
     });
@@ -33,6 +33,8 @@ window.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
 
             menu_mobile.style.display = "none";
+            body.style.overflow = "scroll";
+            open_mobile.style.visibility = "visible";
 
         })
 
